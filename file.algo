@@ -1,0 +1,23 @@
+ALGORITHM chaine
+VAR
+    l,i:INTEGER;
+    sentance:STRING;
+    sumW:INTEGER=1;
+    sumV:INTEGER=0;
+
+BEGIN
+    Write("give a sentance")
+    Read(sentance.ToLower)
+    FOR i FROM 0 TO sentance.length-1 STEP 1  DO
+        l++
+        IF (sentance[i]=' ') THEN
+            sumW++
+        END_IF
+        IF (sentance[i]='a' OR sentance[i]='e' OR sentance[i]='i' OR sentance[i]='o' OR sentance[i]='u' OR sentance[i]='y') THEN
+            sumV++
+        END_IF
+    END_FOR
+    Write("sentance length l=",l)
+    Write("number of words in the sentance sumW=",sumW)
+    Write("number of vowels in the sentance sumW=",sumV)
+END
